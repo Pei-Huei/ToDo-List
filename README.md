@@ -22,6 +22,9 @@
 ## 補充說明
 
 * MySQL 的 Table 欄位說明：  
-1. 有4個欄位，分別為 id, date, time 以及 todo ，並皆設定為不是空值 
-
+1. 有4個欄位，分別為 id ， date ，time 以及 todo ，並皆設定為不是空值 
+2. id 設定為 PRIMARY KEY ，並讓它可以自動增加編號(AUTO_INCREMENT)
+3. 由於 id 設定為 AUTO_INCREMENT ，因此當刪除完資料庫裡的所有資料後，再加入新的資料時，它的 id 值不是從1開始，因此需要手動重置。而重置的方式是進入 MySQL 後，輸入下述其中之一的指令：
+> * ALTER TABLE table_name AUTO_INCREMENT = 1; (讓 Table 裡的 AUTO_INCREMENT 從1開始)
+> * TRUNCATE TABLE table_name; (移除 Table 中的所有資料，但會留存 Table 的結構及其欄位)
 
