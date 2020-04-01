@@ -22,6 +22,6 @@
 ## 補充說明
 
 * MySQL 的 Table 欄位說明：  
-1.有4個，分別為 id , date, time 以及 todo ，並設定為不是空值 
+1. 有4個欄位，分別為 id, date, time 以及 todo ，並皆設定為不是空值 
 
 
