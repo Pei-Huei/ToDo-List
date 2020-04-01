@@ -68,7 +68,7 @@
   			array.push(tbInfo.rows[i].cells[1].innerHTML.trim());
   		}
 
-  		if (array.indexOf(date) > 0){
+  		if (array.indexOf(date) >= 0){
   			location.href = "/?date=" + date;
   		} else {
   			alert('This date is not exist !!');
