@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form name="formEdit" action="todoEdit" method="post">
+        <h1><%= title %></h1>
+        <input type="hidden" name="id" value="<%= data[0].id %>">
+        <div class="editblock">
+            <label>Date:</label>
+            <input type="text" name="date" value="<%= data[0].date%>">
+        </div>
+        <div class="editblock">
+            <label>Time:</label>
+            <input type="text" name="time" value="<%= data[0].time %>">
+        </div>
+        <div class="editblock">
+            <label>To Do:</label>
+            <input type="text" name="todo" value="<%= data[0].todo %>">
+        </div>
+        <div class="editbutton">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <input type="button" value="Back" onclick="window.history.back();">
+        </div>
+  </body>
+</html>

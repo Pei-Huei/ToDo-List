@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div class="search">
+    	<label>Date:</label>
+    	<input type="text" name="Search_Date" placeholder=" Input the date to search">
+    	<input type="button" name="Search_Button" value="Search" onclick="Search();">
+    </div>
+    <table class="table" id="indexTB">
+    	<% if ( data.length > 0){ %>
+    		<tr>
+    			<th>ID</th>
+    			<th>Date</th>
+    			<th>Time</th>
+    			<th>To Do</th>
+    		</tr>
+    		<% for ( var i = 0 ; i < data.length ; i++){ %>
+            	<tr>
+                	<td>
+                    	<%= data[i].id  %>
+                	</td>
+                	<td>
+                    	<%= data[i].date  %>
+                	</td>
+                	<td>
+                    	<%= data[i].time  %>
+                	</td>
+                	<td>
+                    	<%= data[i].todo  %>
+                	</td>
+                	<td>
+                		<input type="button" value="Edit" onclick="Edit('<%= data[i].id %>');">
+                	</td>
+                	<td>
+                		<input type="button" value="Delete" onclick="Delete('<%= data[i].id %>');">
+                	</td>
+            	</tr>
+            	<% } %>
+            <% } %>
+    </table>
+    <div class="add">
+    	<input type='submit' value='Add Something to Do' onclick="location.href='add'">
+    </div>
+  </body>
+  <script type="text/javascript">
+  	function Edit(id){
+  		location.href = "/todoEdit?id=" + id;
+  	}
+
+  	function Delete(id){
+  		var ans = confirm("Do you want to delete this data ?");
+  		if (ans){
+  			location.href = "/todoDelete?id=" + id;
+  		}
+  	}
+
+  	function Search(){
+  		var date = document.getElementsByName('Search_Date')[0].value;
+  		var tbInfo = document.getElementById('indexTB');
+  		var array = [];
+
+  		for(var i = 1; i < tbInfo.rows.length; i++){
+  			array.push(tbInfo.rows[i].cells[1].innerHTML.trim());
+  		}
+
+  		if (array.indexOf(date) > 0){
+  			location.href = "/?date=" + date;
+  		} else {
+  			alert('This date is not exist !!');
+  		}
+  	}
+  </script>
+</html>
