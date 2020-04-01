@@ -9,5 +9,10 @@
 
 ## 開發環境
 
+* 系統環境：Ubuntu v16.04
 * 前端：Ejs v2.6.1  
 * 後端：Node.js v9.11.2 + Express v4.16.1 + MySQL v5.7.29
+
+## 專案執行
+
+在該專案資料夾目錄下，開啟 Terminal ，輸入 npm start ，接著開啟瀏覽器並輸入此網址：http://localhost:3000/
