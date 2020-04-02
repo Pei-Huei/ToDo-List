@@ -18,6 +18,22 @@
 在該專案資料夾目錄下，開啟 Terminal ，輸入 npm start ，接著開啟瀏覽器並輸入此網址：http://localhost:3000/
 
 ## 專案執行畫面
+* 首頁：  
+
+![image](https://github.com/Pei-Huei/ToDo-List/blob/master/pictures/cover.png)
+* 新增： 
+
+![image](https://github.com/Pei-Huei/ToDo-List/blob/master/pictures/add.png)
+* 修改： 
+
+![image](https://github.com/Pei-Huei/ToDo-List/blob/master/pictures/edit.png)
+* 查詢：  
+
+![image](https://github.com/Pei-Huei/ToDo-List/blob/master/pictures/search.png)
+* 刪除：  
+
+![image](https://github.com/Pei-Huei/ToDo-List/blob/master/pictures/delete.png)
+
 ## 補充說明
 
 * MySQL 的 Table 欄位說明：  
