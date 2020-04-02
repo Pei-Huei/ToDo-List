@@ -18,7 +18,6 @@
 在該專案資料夾目錄下，開啟 Terminal ，輸入 npm start ，接著開啟瀏覽器並輸入此網址：http://localhost:3000/
 
 ## 專案執行畫面
-
 ## 補充說明
 
 * MySQL 的 Table 欄位說明：  
